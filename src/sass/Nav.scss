@@ -1,0 +1,67 @@
+@import './util.scss';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: lightblue;
+
+    .logos {
+        img:first-child {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        img:last-child {
+            width: 60px;
+        }
+    }
+
+    .buttons {
+        border: 1px solid lightgray;
+        border-radius: 30px;
+        padding: 5px 7px 0 15px;
+        
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-weight: 600;
+        }
+
+        .guest_btn {
+            color: rgb(73, 73, 73);
+            font-weight: lighter;
+        }
+
+        span {
+            margin: 0 6px;
+            color: lightgray;
+            font-weight: lighter;
+            font-size: 25px;
+            position: relative;
+            top: 4px;
+        }
+
+        div {
+            display: inline-block;
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            background-color: $pink;
+            position: relative;
+            bottom: 7px;
+            margin-left: 8px;
+        }
+
+        i {
+            color: white;
+            font-size: 12px;
+            position: relative;
+            left: 10px;
+            top: 5.5px;
+            -webkit-text-stroke: 1px;
+        }
+    }
+
+}
