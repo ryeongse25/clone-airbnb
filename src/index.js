@@ -10,9 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Nav />
-        <div className="container">
-            <Slider />
-        </div>
+        <hr />
+        <Slider />
     </React.StrictMode>
 );
 
