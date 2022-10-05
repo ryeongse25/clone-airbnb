@@ -1,3 +1,5 @@
+@import '~include-media/dist/include-media';
+
 body {
     margin: 0;
     padding: 0;
@@ -5,10 +7,15 @@ body {
 
 .container {
     width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 hr {
+    @include media('<768px') {
+        display: none;
+    }
+
     border: solid 0.1px lightgray;
     margin: 0;
 }

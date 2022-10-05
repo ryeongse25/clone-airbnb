@@ -31,6 +31,20 @@ const Nav = () => {
                         </div>
                     </div>
                 </nav>
+                <nav className="small-nav">
+                    <div className="box">
+                        <div className="left-box">
+                            <i class="bi bi-search"></i>
+                            <div>
+                                <p>어디로 여행가세요?</p>
+                                <p>어디든지<span>・ 언제든 일주일</span> ・ 게스트 추가</p>
+                            </div>
+                        </div>
+                        <div className="right-circle">
+                            <i class="bi bi-sliders"></i>
+                        </div>
+                    </div>
+                </nav>
             </header>
         </div>
     )

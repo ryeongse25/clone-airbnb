@@ -1,9 +1,14 @@
 @import './util.scss';
+@import '~include-media/dist/include-media';
 
 .nav {
     display: flex;
     justify-content: space-between;
     padding: 15px 0 10px 0;
+
+    @include media('<768px') {
+        display: none;
+    }
 
     .logos {
 
@@ -103,4 +108,67 @@
         }
     }
 
+}
+
+.small-nav {
+    height: 76.5px;
+    padding-top: 17px;
+    box-sizing: border-box;
+
+    @include media('>=768px') {
+        display: none;
+    }
+
+    .box {
+        width: 100%;
+        height: 55px;
+        border: 0.1px solid lightgray;
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 29px 0px;
+
+        .left-box {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin: 0 20px;
+                -webkit-text-stroke: 1px;
+            }
+
+            div {
+                p {
+                    margin: 0;
+                }
+                p:first-child {
+                    font-size: 14px;
+                }
+                p:last-child {
+                    color: gray;
+                    font-size: 12px;
+
+                    span {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        .right-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 0.1px solid lightgray;
+            margin-right: 10px;
+
+            i {
+                position: relative;
+                top: 8px;
+                left: 10px;
+                -webkit-text-stroke: 1px;
+            }
+        }
+    }
 }
