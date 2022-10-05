@@ -6,6 +6,7 @@ import './sass/Index.scss';
 import Nav from './js/Nav';
 import Slider from './js/Slider';
 import Content from './js/Content';
+import Footer from './js/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <hr />
         <Slider />
         <Content />
+        <Footer />
     </React.StrictMode>
 );
 
