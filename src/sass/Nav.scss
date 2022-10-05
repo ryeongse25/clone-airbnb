@@ -71,9 +71,11 @@
 
     .profile_btn {
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .bi-globe {
-            margin: 15px 20px 0 20px;
+            margin: 0 20px;
         }
 
         div {
@@ -82,24 +84,22 @@
             height: 42px;
             width: 77px;
             box-sizing: border-box;
-            padding: 0 0 0 10px;
-            position: relative;
-            top: 3px;
+            text-align: center;
 
             i {
-                margin: 0 3px;
                 -webkit-text-stroke: 1px;
                 position: relative;
             }
 
             .bi-list {
                 top: 3px;
+                left: 8px;
             }
 
             .bi-person-circle {
                 color: gray;
                 font-size: 25px;
-                margin-left: 10px;
+                margin-left: 20px;
                 top: 6px;
             }
         }
