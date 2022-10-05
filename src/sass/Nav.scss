@@ -4,9 +4,13 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
-    background-color: lightblue;
+    border-bottom: 1px solid lightgray;
+    // background-color: beige;
 
     .logos {
+
+        padding-top: 8px;
+
         img:first-child {
             width: 30px;
             margin-right: 5px;
@@ -21,6 +25,7 @@
         border: 1px solid lightgray;
         border-radius: 30px;
         padding: 5px 7px 0 15px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 29px 0px;
         
 
         button {
@@ -61,6 +66,42 @@
             left: 10px;
             top: 5.5px;
             -webkit-text-stroke: 1px;
+        }
+    }
+
+    .profile_btn {
+        display: flex;
+
+        .bi-globe {
+            margin: 15px 20px 0 20px;
+        }
+
+        div {
+            border: 1px solid lightgray;
+            border-radius: 26px;
+            height: 42px;
+            width: 77px;
+            box-sizing: border-box;
+            padding: 0 0 0 10px;
+            position: relative;
+            top: 3px;
+
+            i {
+                margin: 0 3px;
+                -webkit-text-stroke: 1px;
+                position: relative;
+            }
+
+            .bi-list {
+                top: 3px;
+            }
+
+            .bi-person-circle {
+                color: gray;
+                font-size: 25px;
+                margin-left: 10px;
+                top: 6px;
+            }
         }
     }
 

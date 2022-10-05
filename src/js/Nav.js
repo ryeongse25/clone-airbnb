@@ -21,7 +21,14 @@ const Nav = () => {
                 </div>
 
 
-                <div></div>
+                <div className="profile_btn">
+                    <p>호스트 되기</p>
+                    <i class="bi bi-globe"></i>
+                    <div>
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                </div>
             </nav>
         </header>
     )
