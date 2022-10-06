@@ -8,5 +8,25 @@ footer {
 
     .menu {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 47px;
+
+        .right-menu {
+            display: flex;
+
+            div {
+                margin: 0 10px;
+            }
+
+            i {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    p {
+        color: gray;
+        font-size: 10px;
     }
 }
