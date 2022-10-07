@@ -1,16 +1,33 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import { Link } from 'react-router-dom';
 import '../sass/Nav.scss';
 
 const Nav = () => {
+    const btn = useRef();
+    useEffect(() => {
+        document.addEventListener("click", function(e) {
+            if ( btn.current.contains(e.target) ) return;
+            let dropdown = document.querySelector(".dropdown");
+            dropdown.classList.add("d-none");
+        })
+    })
+
+    function showDropdown() {
+        let dropdown = document.querySelector(".dropdown");
+        dropdown.classList.toggle("d-none");
+    }
+
+
     return (
         <div className="container">
             <header>
                 <nav className="nav">
-
-                    <div className="logos">
-                        <img src="./img/logo.png"/>
-                        <img src="./img/t_logo.png"/>
-                    </div>
+                    <Link to="/">
+                        <div className="logos">
+                            <img src="./img/logo.png"/>
+                            <img src="./img/t_logo.png"/>
+                        </div>
+                    </Link>
 
                     <div className="buttons">
                         <button>어디든지</button>
@@ -21,6 +38,42 @@ const Nav = () => {
                         <div><i class="bi bi-search"></i></div>
                     </div>
 
+
+                    <div style={{position: "relative"}}>
+                        <div className="profile_btn">
+                            <p>호스트 되기</p>
+                            <i class="bi bi-globe"></i>
+                            <div onClick={showDropdown} ref={btn}>
+                                <i class="bi bi-list"></i>
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                        </div>
+                        <div className="dropdown d-none">
+                            <p>회원 가입</p>
+                            <p>로그인</p>
+                            <hr />
+                            <p>숙소 호스트 되기</p>
+                            <p>체험 호스팅하기</p>
+                            <p>도움말</p>
+                        </div>
+                    </div>
+                </nav>
+                <nav className="middle-nav nav">
+                    <div className="flex">
+                        <div className="logos">
+                            <img src="./img/logo.png"/>
+                            <img src="./img/t_logo.png"/>
+                        </div>
+
+                        <div className="buttons">
+                            <button>어디든지</button>
+                            <span>|</span>
+                            <button>언제든 일주일</button>
+                            <span>|</span>
+                            <button className="guest_btn">게스트 추가</button>
+                            <div><i class="bi bi-search"></i></div>
+                        </div>
+                    </div>
 
                     <div className="profile_btn">
                         <p>호스트 되기</p>

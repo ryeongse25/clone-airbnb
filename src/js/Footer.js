@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../sass/Footer.scss';
 
 const Footer = () => {
+    useEffect(() => {
+        let div = document.querySelector(".large-nav");
+        console.log(div);
+
+        window.addEventListener('resize', () => {
+            console.log("resize");
+        })
+    }) 
+
     return (
         <footer>
             <div className="container">
+                <div className="btn">
+                    <span>지도 표시하기</span>
+                    <i class="bi bi-map-fill"></i>
+                </div>
                 <div className="large-nav">
                     <div className="menu">
                         <div className="left-menu">
@@ -40,15 +53,15 @@ const Footer = () => {
                 </div>
                 <div className="small-nav">
                     <div>
-                        <i class="bi bi-search"></i>
+                        <i className="bi bi-search"></i>
                         <p>둘러보기</p>
                     </div>
                     <div>
-                        <i class="bi bi-heart"></i>
+                        <i className="bi bi-heart"></i>
                         <p>위시리스트</p>
                     </div>
                     <div>
-                        <i class="bi bi-person-circle"></i>
+                        <i className="bi bi-person-circle"></i>
                         <p>로그인</p>
                     </div>
                 </div>

@@ -9,6 +9,32 @@ footer {
     bottom: 0;
     background-color: white;
 
+    .btn {
+        position: fixed;
+        bottom: 130px;
+
+        border-radius: 30px;
+        color: white;
+        background-color: #222222;
+        padding: 15px 20px;
+        font-size: 14px;
+
+        @include media('<768px') {
+            display: none;
+        }
+
+        i {
+            margin-left: 10px;
+        }
+
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: all 0.3s;
+        }
+    }
+
     .large-nav {
 
         @include media('<768px') {
