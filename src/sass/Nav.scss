@@ -4,16 +4,14 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0 10px 0;
+    align-items: center;
+    height: 80px;
 
     @include media('<768px') {
         display: none;
     }
 
     .logos {
-
-        padding-top: 8px;
-
         img:first-child {
             width: 30px;
             margin-right: 5px;
@@ -111,9 +109,9 @@
 }
 
 .small-nav {
-    height: 76.5px;
-    padding-top: 17px;
-    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    align-items: center;
 
     @include media('>=768px') {
         display: none;
