@@ -1,32 +1,101 @@
+@import './util.scss';
+@import '~include-media/dist/include-media';
+
 footer {
+    width: 100%;
     border: 0.1px solid lightgray;
     position: fixed;
     z-index: 10;
-    height: 100px;
-    width: 100%;
     bottom: 0;
+    background-color: white;
 
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 47px;
+    .large-nav {
 
-        .right-menu {
+        @include media('<768px') {
+            display: none;
+        }
+
+        .menu {
+            height: 47px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+    
+            .left-menu {
+                span:nth-child(odd) {
+                    margin-right: 10px;
 
-            div {
-                margin: 0 10px;
+                    &:not(:first-child):hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+    
+                span:nth-child(even) {
+                    margin-right: 5px;
+                }
             }
-
-            i {
-                margin: 0 10px;
+    
+            .right-menu {
+                display: flex;
+                gap: 30px;
+                font-weight: 600;
+                white-space: nowrap;
+    
+                i {
+                    margin: 0 10px;
+                }
+    
+                .bi-chevron-up {
+                    -webkit-text-stroke: 1px;
+                    cursor: pointer;
+                }
+    
+                span:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+    
+                .under-nav:active {
+                    color: gray;
+                }
+            }
+        }
+    
+        .detail {
+            border-top: 1px solid lightgray;
+    
+            p {
+                color: gray;
+                font-size: 10px;
+                margin-bottom: 5px;
             }
         }
     }
 
-    p {
-        color: gray;
-        font-size: 10px;
+    .small-nav {
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        text-align: center;
+
+        @include media('>=768px') {
+            display: none;
+        }
+
+        i {
+            color: gray;
+            -webkit-text-stroke: 0.3px;
+            font-size: 20px;
+        }
+
+        p {
+            margin: 5px 0 0 0;
+            font-size: 10px;
+            color: gray;
+        }
     }
 }
