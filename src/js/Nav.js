@@ -5,6 +5,11 @@ import '../sass/Nav.scss';
 const Nav = () => {
     const btn = useRef();
     useEffect(() => {
+        let profile_btn = document.querySelector(".profile_btn");
+        let logo = document.querySelector(".logos");
+
+        logo.style.width = profile_btn.clientWidth + "px";
+
         document.addEventListener("click", function(e) {
             if ( btn.current.contains(e.target) ) return;
             let dropdown = document.querySelector(".dropdown");
@@ -22,12 +27,12 @@ const Nav = () => {
         <div className="container">
             <header>
                 <nav className="nav">
-                    <Link to="/">
                         <div className="logos">
-                            <img src="./img/logo.png"/>
-                            <img src="./img/t_logo.png"/>
+                            <Link to="/">
+                                <img src="./img/logo.png"/>
+                                <img src="./img/t_logo.png"/>
+                            </Link>
                         </div>
-                    </Link>
 
                     <div className="buttons">
                         <button>어디든지</button>
@@ -42,8 +47,8 @@ const Nav = () => {
                     <div style={{position: "relative"}}>
                         <div className="profile_btn">
                             <p>호스트 되기</p>
-                            <i class="bi bi-globe"></i>
-                            <div onClick={showDropdown} ref={btn}>
+                            <div className="globe"><i class="bi bi-globe"></i></div>
+                            <div className="btn" onClick={showDropdown} ref={btn}>
                                 <i class="bi bi-list"></i>
                                 <i class="bi bi-person-circle"></i>
                             </div>
@@ -61,8 +66,10 @@ const Nav = () => {
                 <nav className="middle-nav nav">
                     <div className="flex">
                         <div className="logos">
-                            <img src="./img/logo.png"/>
-                            <img src="./img/t_logo.png"/>
+                            <Link to="/">
+                                <img src="./img/logo.png"/>
+                                <img src="./img/t_logo.png"/>
+                            </Link>
                         </div>
 
                         <div className="buttons">
@@ -77,8 +84,8 @@ const Nav = () => {
 
                     <div className="profile_btn">
                         <p>호스트 되기</p>
-                        <i class="bi bi-globe"></i>
-                        <div>
+                        <div className="globe"><i class="bi bi-globe"></i></div>
+                        <div className="btn">
                             <i class="bi bi-list"></i>
                             <i class="bi bi-person-circle"></i>
                         </div>

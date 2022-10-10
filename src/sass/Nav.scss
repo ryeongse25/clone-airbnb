@@ -37,6 +37,7 @@ header {
                 border: none;
                 background-color: transparent;
                 font-weight: 600;
+                cursor: pointer;
             }
     
             .guest_btn {
@@ -72,18 +73,41 @@ header {
                 top: 5.5px;
                 -webkit-text-stroke: 1px;
             }
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                cursor: pointer;
+            }
         }
     
         .profile_btn {
             display: flex;
             justify-content: center;
             align-items: center;
-    
-            .bi-globe {
-                margin: 0 20px;
+
+            p {
+                padding: 13px 15px;
+                border-radius: 25px;
+                font-size: 14px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $shadow-gray;
+                }
+            }
+
+            .globe {
+                margin: 0 20px 0 0;
+                padding: 13px;
+                border-radius: 50%;
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: $shadow-gray;
+                }
             }
     
-            div {
+            .btn {
                 border: 1px solid lightgray;
                 border-radius: 26px;
                 height: 42px;
@@ -157,6 +181,7 @@ header {
             justify-content: space-between;
             align-items: center;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 29px 0px;
+            cursor: pointer;
     
             .left-box {
                 display: flex;
@@ -231,7 +256,7 @@ header {
             }
 
             &:hover {
-                background-color: rgb(250, 250, 250);
+                background-color: $shadow-gray;
                 cursor: pointer;
             }
         }
