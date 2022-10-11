@@ -1,6 +1,53 @@
 .room {
-
     white-space: nowrap;
+
+    .carousel-slider {
+
+        position: relative;
+
+        .pictures {
+    
+            img {
+                width: 100%;
+                border-radius: 20px;
+                margin-bottom: 5px;
+            }
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            color: transparent;
+        }
+
+        .prev_button {
+            left: 10px;
+          }
+          
+          .next_button {
+            right: 10px;
+          }
+    }
+    
+    .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        p {
+            color: black;
+
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+    }
 
     p {
         margin: 1px 0;
@@ -13,26 +60,6 @@
 
         span {
             font-weight: 600;
-        }
-    }
-
-    img {
-        width: 100%;
-        border-radius: 20px;
-        margin-bottom: 5px;
-    }
-    
-    div {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px;
-
-        p {
-            color: black;
-
-            &:first-child {
-                font-weight: 500;
-            }
         }
     }
 
