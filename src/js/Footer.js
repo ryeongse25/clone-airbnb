@@ -2,9 +2,10 @@ import React, {useEffect} from 'react';
 import '../sass/Footer.scss';
 
 const Footer = () => {
+
     useEffect(() => {
-        let div = document.querySelector(".large-nav");
-        let btn = document.querySelector(".btn");
+        let div = document.querySelector("footer .large-nav");
+        let btn = document.querySelector("footer .btn");
 
         btn.style.bottom = div.clientHeight + 50 + "px";
         btn.style.left = (window.innerWidth - btn.clientWidth) / 2 + "px";
