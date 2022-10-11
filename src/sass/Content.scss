@@ -1,3 +1,5 @@
+@import '~include-media/dist/include-media';
+
 .content {
 
     .container {
@@ -8,6 +10,22 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             column-gap: 20px;
             row-gap: 40px;
+
+            @include media('<1606px') {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            @include media('<1128px') {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            @include media('<950px') {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include media('<550px') {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }
