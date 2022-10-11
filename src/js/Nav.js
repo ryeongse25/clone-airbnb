@@ -5,8 +5,8 @@ import '../sass/Nav.scss';
 const Nav = () => {
     const btn = useRef();
     useEffect(() => {
-        let profile_btn = document.querySelector(".profile_btn");
-        let logo = document.querySelector(".logos");
+        let profile_btn = document.querySelector("header .profile_btn");
+        let logo = document.querySelector("header .logos");
 
         logo.style.width = profile_btn.clientWidth + "px";
 

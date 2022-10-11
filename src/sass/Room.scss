@@ -1,18 +1,42 @@
 .room {
-    width: 280px;
+
+    white-space: nowrap;
 
     p {
-        margin: 0;
+        margin: 1px 0;
+        font-size: 15px;
+        color: gray;
+
+        &:last-child {
+            color: black;
+        }
+
+        span {
+            font-weight: 600;
+        }
     }
 
     img {
         width: 100%;
-        height: 250px;
         border-radius: 20px;
+        margin-bottom: 5px;
     }
     
     div {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5px;
+
+        p {
+            color: black;
+
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .price {
+        margin-top: 8px;
     }
 }
