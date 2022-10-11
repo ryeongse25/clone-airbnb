@@ -16,6 +16,11 @@ const Footer = () => {
         })
     }) 
 
+    function showUnderbar() {
+        let underbar = document.querySelector(".underbar");
+        underbar.classList.remove("d-none");
+    }
+
     return (
         <footer>
             <div className="container">
@@ -46,7 +51,7 @@ const Footer = () => {
                             <div>
                                 ₩ <span>KRW</span>
                             </div>
-                            <div className="under-nav">
+                            <div className="under-nav" onClick={showUnderbar}>
                                 <span>지원 및 참고 자료</span>
                                 <i class="bi bi-chevron-up"></i>
                             </div>

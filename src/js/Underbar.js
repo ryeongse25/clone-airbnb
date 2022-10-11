@@ -2,9 +2,13 @@ import React from 'react';
 import '../sass/Underbar.scss';
 
 const Underbar = () => {
+    function hideUnderbar() {
+        let underbar = document.querySelector(".underbar");
+        underbar.classList.add("d-none");
+    }
     return (
-        <div className="underbar">
-            <div className="close_btn">✕</div>
+        <div className="underbar d-none">
+            <div className="close_btn" onClick={hideUnderbar}>✕</div>
             <div className="container">
                 <div className="section">
                     <div className="title fist-title">에어비앤비 지원</div>
