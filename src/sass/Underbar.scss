@@ -1,0 +1,102 @@
+@import '~include-media/dist/include-media';
+
+.underbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px 0 40px 0;
+
+    .close_btn {
+        font-size: 15px;
+        position: relative;
+        left: 25px;
+        top: -15px;
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+
+        .section {
+            margin-right: 14%;
+            white-space: nowrap;
+
+            .title {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .list {
+
+                p {
+                    font-size: 14px;
+                    margin: 20px 0;
+            
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .detail {
+            display: none;
+        }
+    }
+
+    @include media('<1128px') {
+
+        padding: 10px 0 0 0;
+
+        .close_btn {
+            top: 10px;
+        }
+
+        .container {
+            display: block;
+
+            .section {
+                margin: 0;
+
+                .title {
+                    margin: 25px 0 8px 0;
+                }
+
+                .list {
+                    border-bottom: 1px solid lightgray;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    padding-bottom: 20px;
+
+                    p {
+                        margin: 8px 0;
+                    }
+                }
+            }
+
+            .detail {
+                display: block;
+                padding: 20px 0;
+
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    &:last-child {
+                        color: gray;
+                        font-size: 10px;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media('<768px') {
+        display: none;
+    }
+}

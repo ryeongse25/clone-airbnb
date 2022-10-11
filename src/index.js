@@ -9,6 +9,7 @@ import Slider from './js/Slider';
 import Content from './js/Content';
 import Footer from './js/Footer';
 import Map from './js/Map';
+import Underbar from './js/Underbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
             <Slider />
             <Content />
             <Footer />
+            <Underbar />
             <Map />
         </BrowserRouter>
     </React.StrictMode>
