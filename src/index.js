@@ -6,6 +6,7 @@ import './sass/Index.scss';
 
 import Nav from './js/Nav';
 import Slider from './js/Slider';
+import NewSlide from './js/NewSlide';
 import Content from './js/Content';
 import Footer from './js/Footer';
 import Map from './js/Map';
@@ -16,7 +17,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Nav />
-            <Slider />
+            <NewSlide />
             <Content />
             <Footer />
             <Underbar />

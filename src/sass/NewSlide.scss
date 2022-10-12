@@ -1,0 +1,65 @@
+@import './util.scss';
+@import '~include-media/dist/include-media';
+
+.slider {
+    width: 100%;
+    height: 98px;
+    border-top: 0.1px solid lightgray;
+    padding-top: 15px;
+
+    .slider-container {
+        width: 90%;
+        max-width: 1600px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        .elements {
+
+            width: 100%;
+            min-width: 0px;
+            padding: 0 50px;
+
+            div {
+                text-align: center;
+                opacity: 0.9;
+                box-sizing: border-box;
+                white-space: nowrap;
+            }
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin: auto;
+        }
+
+        p {
+            margin: 8px 0 5px 0;
+            font-size: 12px;
+        }
+    
+        .filter-box {
+            height: 48px;
+            width: 76.77px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid lightgray;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+
+            @include media('<768px') {
+                display: none;
+            }
+    
+            i {
+                font-size: 13px;
+                margin-right: 8px;
+                -webkit-text-stroke: 0.5px;
+            }
+        }
+    }
+}
