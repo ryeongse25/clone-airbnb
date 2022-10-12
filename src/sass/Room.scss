@@ -3,36 +3,11 @@
 
     .carousel-slider {
 
-        position: relative;
-
-        .pictures {
-    
-            img {
-                width: 100%;
-                border-radius: 20px;
-                margin-bottom: 5px;
-            }
+        img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 5px;
         }
-
-        button {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            background-color: transparent;
-            color: transparent;
-        }
-
-        .prev_button {
-            left: 10px;
-          }
-          
-          .next_button {
-            right: 10px;
-          }
     }
     
     .title {

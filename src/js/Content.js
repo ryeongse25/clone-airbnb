@@ -1,5 +1,6 @@
 import React from 'react';
 import Room from './Room.js';
+import SlideRoom from './SlideRoom.js';
 import '../sass/Content.scss';
 
 const Content = () => {
@@ -8,8 +9,6 @@ const Content = () => {
         <div className="content">
             <div className="container">
                 <div className="rooms">
-                    <Room />
-                    <Room />
                     <Room />
                     <Room />
                     <Room />
