@@ -7,25 +7,24 @@
         .rooms {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            // column-gap: 20px;
-            // row-gap: 40px;
-            background-color: black;
+            grid-template-columns: 19.2% 19.2% 19.2% 19.2% 19.2%;
+            column-gap: 1%;
+            row-gap: 40px;
 
             @include media('<1606px') {
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
             }
 
             @include media('<1128px') {
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 32.67% 32.67% 32.67%;
             }
 
             @include media('<950px') {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 49.5% 49.5%;
             }
 
             @include media('<550px') {
-                grid-template-columns: 1fr;
+                grid-template-columns: 100%;
             }
         }
     }

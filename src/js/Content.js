@@ -1,5 +1,4 @@
 import React from 'react';
-import Room from './Room.js';
 import SlideRoom from './SlideRoom.js';
 import '../sass/Content.scss';
 
