@@ -9,7 +9,6 @@
 
     .slider-container {
         width: 90%;
-        max-width: 1600px;
         height: 100%;
         margin: auto;
         display: flex;
@@ -20,12 +19,34 @@
             width: 100%;
             min-width: 0px;
             padding: 0 50px;
+            position: relative;
 
             div {
                 text-align: center;
                 opacity: 0.9;
-                box-sizing: border-box;
                 white-space: nowrap;
+                border-bottom: 2px solid transparent;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: white;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid lightgray;
+                font-weight: bolder;
+                cursor: pointer;
+
+                &.left {
+                    left: 15px;
+                }
+
+                &:last-child {
+                    right: 15px;
+                }
             }
         }
 
