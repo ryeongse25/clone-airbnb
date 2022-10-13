@@ -8,8 +8,9 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            column-gap: 20px;
-            row-gap: 40px;
+            // column-gap: 20px;
+            // row-gap: 40px;
+            background-color: black;
 
             @include media('<1606px') {
                 grid-template-columns: 1fr 1fr 1fr 1fr;

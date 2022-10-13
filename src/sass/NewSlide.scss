@@ -9,6 +9,7 @@
 
     .slider-container {
         width: 90%;
+        max-width: 1600px;
         height: 100%;
         margin: auto;
         display: flex;
@@ -23,7 +24,6 @@
 
             div {
                 text-align: center;
-                opacity: 0.9;
                 white-space: nowrap;
                 border-bottom: 2px solid transparent;
             }

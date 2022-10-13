@@ -9,11 +9,13 @@ const Content = () => {
         <div className="content">
             <div className="container">
                 <div className="rooms">
-                    <Room />
-                    <Room />
-                    <Room />
-                    <Room />
-                    <Room />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
                 </div>
             </div>
         </div>

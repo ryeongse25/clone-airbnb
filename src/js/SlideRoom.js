@@ -2,41 +2,18 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../sass/Room.scss';
+import '../sass/SlideRoom.scss';
 
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red", right: "0" }}
-        onClick={onClick}
-      />
-    );
-}
-  
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-        className={className}
-        style={{ ...style, display: "block", background: "green", left: "0" }}
-        onClick={onClick}
-        />
-    );
-}
+const SlideRoom = () => {
+    const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false
+    };
 
-export default class SlideRoom extends Component {
-    render() {
-      const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-      };
-      return (
+    return (
         <div className="room">
             <div className="carousel-slider">
                 <Slider {...settings}>
@@ -65,6 +42,7 @@ export default class SlideRoom extends Component {
             <p>11월 16일 ~ 21일</p>
             <p className="price"><span>₩110.694</span> /박</p>
         </div>
-      );
-    }
+    );
 }
+
+export default SlideRoom;

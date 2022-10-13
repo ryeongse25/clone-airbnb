@@ -1,6 +1,15 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 const Menu = (props) => {
+
+    useEffect(() => {
+        let item = document.querySelectorAll(".item");
+        for (let i = 0; i<item.length; i++) {
+            item[i].style.opacity = "0.6";
+        }
+    })
+
+
     const div = useRef();
 
     const onMouseOver = () => {
@@ -11,11 +20,15 @@ const Menu = (props) => {
 
     const onMouseLeave = () => {
         div.current.style.borderBottom = "2px solid transparent";
-        div.current.style.opacity = "0.9";
+        div.current.style.opacity = "0.6";
     }
+    
+    var style = {};
+
+    if ( props.img == "1" ) style = {opacity: '1'};
 
     return (
-        <div ref={div} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+        <div className="item" ref={div} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
             <img src={"./img/type" + props.img + ".jpeg"} />
             <p>{props.title}</p>
         </div>
