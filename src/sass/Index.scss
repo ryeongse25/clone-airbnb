@@ -13,10 +13,5 @@ body {
 }
 
 hr {
-    @include media('<768px') {
-        display: none;
-    }
-
     border: solid 0.1px lightgray;
-    margin: 0;
 }
