@@ -9,6 +9,27 @@
             display: block;
             padding-top: 100%;
         }
+
+        i {
+            font-size: 25px;
+            position: absolute;
+            z-index: 10;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+        .bi-heart-fill {
+            color: black;
+            opacity: 0.5;
+        }
+
+        .bi-heart {
+            color: white;
+            -webkit-text-stroke: 0.5px;
+        }
+
+
         .carousel-slider {
             position: absolute;
             top: 0;
@@ -19,8 +40,7 @@
 
             & div {
                 height: 100%;
-              }
-
+            }
         }
     }
 

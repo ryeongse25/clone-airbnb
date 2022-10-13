@@ -47,6 +47,8 @@ const SlideRoom = () => {
     return (
         <div className="room">
             <div className="room-slide">
+                <i className="bi bi-heart-fill"></i>
+                <i className="bi bi-heart"></i>
                 <div className="carousel-slider" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} ref={div}>
                     <Slider {...settings} dotsClass="dot-css" style={{height: '100%'}} ref={slider}>
                         <div>
