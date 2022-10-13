@@ -21,7 +21,7 @@ const FooterComponent = (props) => {
     }
 
     return (
-        <div className="container" style={{visibility: props.vis}}>
+        <div className="container" style={{visibility: props.vis, height: props.height}}>
             <div className="large-nav">
                 <div className="menu">
                     <div className="left-menu">
@@ -72,9 +72,5 @@ const FooterComponent = (props) => {
         </div>
     )
 }
-
-FooterComponent.defaultProps = {
-    vis: 'visible'
-};
 
 export default FooterComponent;
