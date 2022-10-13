@@ -6,8 +6,8 @@ function MapComponent() {
 
     const initMap = useCallback(() => {
         new window.google.maps.Map(mapRef.current, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        center: { lat: 37.517711987620665, lng: 126.88631243659493 },
+        zoom: 17,
         });
     }, [mapRef]);
 

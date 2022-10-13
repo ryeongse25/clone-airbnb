@@ -15,6 +15,9 @@ const Content = () => {
                     <SlideRoom />
                     <SlideRoom />
                     <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
+                    <SlideRoom />
                 </div>
             </div>
         </div>
