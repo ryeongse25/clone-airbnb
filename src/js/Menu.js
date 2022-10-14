@@ -22,13 +22,9 @@ const Menu = (props) => {
         div.current.style.borderBottom = "2px solid transparent";
         div.current.style.opacity = "0.6";
     }
-    
-   const onClick = () => {
-        console.log("clicked");
-   }
 
     return (
-        <div className="item" ref={div} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={onClick}>
+        <div className="item" ref={div} onClick={()=>{ props.function( props.title ) }} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
             <img src={"./img/type" + props.img + ".jpeg"} />
             <p>{props.title}</p>
         </div>

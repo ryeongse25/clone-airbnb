@@ -6,8 +6,6 @@ import '../sass/SlideRoom.scss';
 
 const SlideRoom = (props) => {
 
-    const [list, setList] = useState('1.1');
-
     const settings = {
         dots: true,
         infinite: true,
@@ -41,19 +39,19 @@ const SlideRoom = (props) => {
                 <div className="carousel-slider" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} ref={div}>
                     <Slider {...settings} dotsClass="dot-css" style={{height: '100%'}} ref={slider}>
                         <div>
-                            <img src="./img/room1.jpeg" />
+                            <img src={"./img/" + props.img} />
                         </div>
                         <div>
-                            <img src="./img/room1.jpeg" />
+                        <img src={"./img/" + props.img} />
                         </div>
                         <div>
-                            <img src="./img/room1.jpeg" />
+                        <img src={"./img/" + props.img} />
                         </div>
                         <div>
-                            <img src="./img/room1.jpeg" />
+                        <img src={"./img/" + props.img} />
                         </div>
                         <div>
-                            <img src="./img/room1.jpeg" />
+                        <img src={"./img/" + props.img} />
                         </div>
                     </Slider>
                     <button className="left d-none" onClick={() => slider?.current?.slickPrev()}>&lt;</button>
@@ -62,8 +60,8 @@ const SlideRoom = (props) => {
                 </div>
             <div>
             <div className="title">
-                <p>Sindun-myeon, Icheon-si, 한국</p>
-                <p>★ {list}</p>
+                <p>{props.title}</p>
+                <p>★ {props.star}</p>
             </div>
             <p>46km 거리</p>
             <p>11월 16일 ~ 21일</p>

@@ -55,7 +55,7 @@ export default class NewSlide extends Component {
                     <div className="elements">
                         <Slider ref={slider} {...settings}>
                             {this.state.title.map((title, idx) => {
-                                return <Menu key={idx+1} img={idx+1} title={title} style={{borderBottom : "2px solid transparent"}}/>
+                                return <Menu key={idx+1} img={idx+1} title={title} function={this.props.function} style={{borderBottom : "2px solid transparent"}}/>
                             })}
                         </Slider>
                         <button className="left" onClick={() => slider?.current?.slickPrev()}>&lt;</button>
