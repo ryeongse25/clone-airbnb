@@ -1,23 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../sass/SlideRoom.scss';
 
-const SlideRoom = () => {
+const SlideRoom = (props) => {
 
-    // useEffect(() => {
-    //     let img = document.querySelectorAll(".room img");
-    //     for (let i=0; i<img.length; i++) {
-    //         img[i].style.height = img[i].clientWidth - 10 + "px";
-    //     }
-
-    //     window.addEventListener('resize', () => {
-    //         for (let i=0; i<img.length; i++) {
-    //             img[i].style.height = img[i].clientWidth - 10 + "px";
-    //         }
-    //     })
-    // })
+    const [list, setList] = useState('1.1');
 
     const settings = {
         dots: true,
@@ -74,7 +63,7 @@ const SlideRoom = () => {
             <div>
             <div className="title">
                 <p>Sindun-myeon, Icheon-si, 한국</p>
-                <p>★ 4.8</p>
+                <p>★ {list}</p>
             </div>
             <p>46km 거리</p>
             <p>11월 16일 ~ 21일</p>

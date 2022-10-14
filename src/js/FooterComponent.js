@@ -39,7 +39,7 @@ const FooterComponent = (props) => {
                     </div>
                     <div className="right-menu">
                         <div>
-                            <i class="bi bi-globe"></i>
+                            <i className="bi bi-globe"></i>
                             <span>한국어 (KR)</span>
                         </div>
                         <div>
@@ -47,7 +47,7 @@ const FooterComponent = (props) => {
                         </div>
                         <div className="under-nav" onClick={showUnderbar}>
                             <span>지원 및 참고 자료</span>
-                            <i class="bi bi-chevron-up"></i>
+                            <i className="bi bi-chevron-up"></i>
                         </div>
                     </div>
                 </div>

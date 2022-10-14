@@ -23,12 +23,12 @@ const Menu = (props) => {
         div.current.style.opacity = "0.6";
     }
     
-    var style = {};
-
-    if ( props.img == "1" ) style = {opacity: '1'};
+   const onClick = () => {
+        console.log("clicked");
+   }
 
     return (
-        <div className="item" ref={div} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+        <div className="item" ref={div} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={onClick}>
             <img src={"./img/type" + props.img + ".jpeg"} />
             <p>{props.title}</p>
         </div>

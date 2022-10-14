@@ -47,25 +47,26 @@ export default class NewSlide extends Component {
             ]
         };
  
-      const slider = React.createRef();
-      return (
-        <div className="slider">
-            <div className="slider-container">
-                <div className="elements">
-                    <Slider ref={slider} {...settings}>
-                        {this.state.title.map((title, idx) => {
-                            return <Menu img={idx+1} title={title} style={{borderBottom : "2px solid transparent"}}/>
-                        })}
-                    </Slider>
-                    <button className="left" onClick={() => slider?.current?.slickPrev()}>&lt;</button>
-                    <button onClick={() => slider?.current?.slickNext()}>&gt;</button>
-                </div>
-                <div className="filter-box">
-                    <i class="bi bi-sliders"></i>
-                    <span>필터</span>
+        const slider = React.createRef();
+
+        return (
+            <div className="slider">
+                <div className="slider-container">
+                    <div className="elements">
+                        <Slider ref={slider} {...settings}>
+                            {this.state.title.map((title, idx) => {
+                                return <Menu key={idx+1} img={idx+1} title={title} style={{borderBottom : "2px solid transparent"}}/>
+                            })}
+                        </Slider>
+                        <button className="left" onClick={() => slider?.current?.slickPrev()}>&lt;</button>
+                        <button onClick={() => slider?.current?.slickNext()}>&gt;</button>
+                    </div>
+                    <div className="filter-box">
+                        <i className="bi bi-sliders"></i>
+                        <span>필터</span>
+                    </div>
                 </div>
             </div>
-        </div>
-      );
+        );
     }
 }
