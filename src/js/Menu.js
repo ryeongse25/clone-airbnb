@@ -1,7 +1,7 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const Menu = (props) => {
-    let clicked = "";
+    const [clicked, setClicked] = useState("");
 
     useEffect(() => {
         let item = document.querySelectorAll(".item");
@@ -22,7 +22,7 @@ const Menu = (props) => {
     const onMouseLeave = (title) => {
         if (clicked != title) {
             div.current.style.borderBottom = "2px solid transparent";
-            div.current.style.opacity = "0.6";
+            div.current.style.opacity = "0.5";
         }
     }
 
@@ -31,10 +31,10 @@ const Menu = (props) => {
         
         for (let i=0; i<divs.length; i++) {
             divs[i].style.borderBottom = "2px solid transparent";
-            divs[i].style.opacity = "0.6";
+            divs[i].style.opacity = "0.5";
         }
 
-        clicked = title;
+        setClicked(title);
         div.current.style.opacity = "1";
         div.current.style.borderBottom = "2px solid lightgray";
     }

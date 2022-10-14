@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import SlideRoom from './SlideRoom.js';
 import '../sass/Content.scss';
 import NewSlide from './NewSlide.js';
-import { toBeInTheDocument } from '@testing-library/jest-dom/dist/matchers.js';
 
 const Content = () => {
 
