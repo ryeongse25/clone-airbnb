@@ -13,12 +13,7 @@ const FooterComponent = (props) => {
             btn.style.bottom = div.clientHeight + 50 + "px";
             btn.style.left = (window.innerWidth - btn.clientWidth) / 2 + "px";
         })
-    }) 
-
-    function showUnderbar() {
-        let underbar = document.querySelector(".underbar");
-        underbar.classList.remove("d-none");
-    }
+    })
 
     return (
         <div className="container" style={{visibility: props.vis, height: props.height}}>
@@ -45,7 +40,7 @@ const FooterComponent = (props) => {
                         <div>
                             ₩ <span>KRW</span>
                         </div>
-                        <div className="under-nav" onClick={showUnderbar}>
+                        <div className="under-nav" onClick={props.function}>
                             <span>지원 및 참고 자료</span>
                             <i className="bi bi-chevron-up"></i>
                         </div>

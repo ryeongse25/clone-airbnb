@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 
 const Menu = (props) => {
+    let clicked = "";
 
     useEffect(() => {
         let item = document.querySelectorAll(".item");
@@ -18,13 +19,28 @@ const Menu = (props) => {
         div.current.style.opacity = "1";
     }
 
-    const onMouseLeave = () => {
-        div.current.style.borderBottom = "2px solid transparent";
-        div.current.style.opacity = "0.6";
+    const onMouseLeave = (title) => {
+        if (clicked != title) {
+            div.current.style.borderBottom = "2px solid transparent";
+            div.current.style.opacity = "0.6";
+        }
+    }
+
+    const changeColor = (title) => {
+        let divs = document.querySelectorAll(".item");
+        
+        for (let i=0; i<divs.length; i++) {
+            divs[i].style.borderBottom = "2px solid transparent";
+            divs[i].style.opacity = "0.6";
+        }
+
+        clicked = title;
+        div.current.style.opacity = "1";
+        div.current.style.borderBottom = "2px solid lightgray";
     }
 
     return (
-        <div className="item" ref={div} onClick={()=>{ props.function( props.title ) }} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+        <div className="item" ref={div} onClick={()=>{ props.function( props.title ); changeColor( props.title ) }} onMouseOver={onMouseOver} onMouseLeave={() => {onMouseLeave(props.title)}}>
             <img src={"./img/type" + props.img + ".jpeg"} />
             <p>{props.title}</p>
         </div>
