@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import '../sass/Underbar.scss';
 
 const Underbar = (props) => {
 
     return (
         <div className="underbar d-none">
-            <div className="close_btn" onClick={props.function}>✕</div>
+            <div className="close_btn" onClick={props.hideFunction}>✕</div>
             <div className="container">
                 <div className="section">
                     <div className="title fist-title">에어비앤비 지원</div>

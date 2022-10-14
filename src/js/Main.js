@@ -31,8 +31,9 @@ const Main = (props) => {
         <div>
             <Nav />
             <Content />
-            <Footer Overlay={overlay} function={showUnderbar}/>
-            <Underbar function={hideUnderbar} />
+            <Footer Overlay={overlay} function={showUnderbar} hideFunction={hideUnderbar}/>
+            {/* <div className="bg"></div> */}
+            {/* <Underbar function={hideUnderbar} /> */}
         </div>
     )
 }
