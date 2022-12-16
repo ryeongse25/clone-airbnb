@@ -1,1 +1,3 @@
-# clone-airbnb
+## 에어비앤비 클론 코딩
+
+사용 기술: React
